@@ -10,7 +10,7 @@
 
         body {
             font-family: Arial;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #27324e;
             margin: 0;
@@ -19,11 +19,11 @@
 
         .content {
             width: 1240px;
-            height: 1754px;
+            max-height: 1754px;
             margin: auto;
             background-color: #fff;
             position: relative;
-            padding: 26px 60px 0;
+            padding: 26px 60px 120px;
         }
 
         .logo {
@@ -52,8 +52,8 @@
 
         .qr img {
             border: 1px solid #a1a1a1;
-            width: 176px;
-            height: 176px;
+            width: 150px;
+            height: 150px;
         }
 
         .tables {
@@ -129,7 +129,7 @@
 
         th,
         td {
-            padding: 13px 10px 9px;
+            padding: 3px 10px 3px;
             line-height: 1.5;
         }
 
@@ -141,13 +141,13 @@
 
         @media print {
             body {
-                font-size: 2.71mm;
+                font-size: 2.5mm;
             }
 
             .content {
                 width: 210mm;
-                height: 297mm;
-                padding: 4.2mm 10mm 0;
+                max-height: 297mm;
+                padding: 4.2mm 10mm 20.3mm;
             }
 
             .logo img {
@@ -160,8 +160,8 @@
 
             .qr img {
                 border: 0.2mm solid #a1a1a1;
-                width: 29.5mm;
-                height: 29.5mm;
+                width: 25.5mm;
+                height: 25.5mm;
             }
 
             .tables table th,
@@ -209,7 +209,7 @@
 
             th,
             td {
-                padding: 2.3mm 2.2mm 2.2mm;
+                padding: 0.6mm 2.2mm 0.6mm;
                 line-height: 1.5;
             }
 
