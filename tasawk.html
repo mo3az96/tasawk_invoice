@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>tasawk</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: 700;
+            color: #27324e;
+        }
+
+        .content {
+            width: 1240px;
+            height: 1754px;
+            margin: auto;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .title h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .qr {
+            display: flex;
+        }
+
+        .qr img {
+            border: 1px solid #a1a1a1;
+            width: 176px;
+            height: 176px;
+        }
+
+        .tables {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tables table th,
+        .tables table td {
+            width: 185px;
+        }
+
+        .tables-content {
+            display: flex;
+            margin-top: 25px;
+        }
+
+        .tables-content table {
+            width: 50%;
+        }
+
+        .tables-content table th {
+            font-size: 18px;
+            width: 50%;
+            border: none;
+            background-color: #27324e;
+            color: #fff;
+        }
+
+        .tables-content table td {
+            width: 143px;
+        }
+
+        .cell-title.name {
+            width: 138px;
+            padding: 30px 10px;
+        }
+
+        .products,
+        .totals {
+            width: 100%;
+            margin-top: 25px;
+            table-layout: fixed;
+        }
+
+        .products th,
+        .totals th {
+            font-size: 18px;
+            width: 50%;
+            border: none;
+            background-color: #27324e;
+            color: #fff;
+        }
+
+        .subtitle td {
+            text-align: center;
+            background: #e5e6ea;
+            padding: 10px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #a1a1a1;
+
+        }
+
+        th,
+        td {
+            padding: 13px 10px 9px;
+            line-height: 1.5;
+        }
+
+        .stamp {
+            position: absolute;
+            bottom: 30px;
+            left: 90px;
+        }
+
+        @media print {
+            body {
+                font-size: 2.71mm;
+            }
+
+            .content {
+                width: 210mm;
+                height: 297mm;
+                padding: 0 10mm 20.3mm;
+            }
+
+            .logo img {
+                width: 30.48mm;
+            }
+
+            .title h1 {
+                font-size: 4.74mm;
+            }
+
+            .qr img {
+                border: 0.2mm solid #a1a1a1;
+                width: 29.5mm;
+                height: 29.5mm;
+            }
+
+            .tables table th,
+            .tables table td {
+                width: 31.5mm;
+            }
+
+            .tables-content {
+                margin-top: 4mm;
+            }
+
+            .tables-content table th {
+                font-size: 3.05mm;
+            }
+
+            .tables-content table td {
+                width: 24.3;
+            }
+
+            .cell-title.name {
+                width: 23.4mm;
+                padding: 5.5mm 1.9mm;
+            }
+
+            .products,
+            .totals {
+                margin-top: 4mm;
+            }
+
+            .products th,
+            .totals th {
+                font-size: 3.05mm;
+            }
+
+            .subtitle td {
+                padding: 1.9mm 0;
+            }
+
+            table,
+            th,
+            td {
+                border: 0.2mm solid #a1a1a1;
+
+            }
+
+            th,
+            td {
+                padding: 2.3mm 2.2mm 2.2mm;
+                line-height: 1.5;
+            }
+
+            .stamp {
+                bottom: 5.5mm;
+                left: 26mm;
+                width: 38.44mm;
+                height: 27.26mm;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="content">
+        <div class="logo">
+            <img src="./logo.png">
+        </div>
+        <div class="title">
+            <h1>
+                فاتورة ضريبية
+                <br>
+                Tax Invoice
+            </h1>
+        </div>
+        <div class="head">
+            <div class="qr">
+                <img src="./qr.png">
+            </div>
+            <div class="tables">
+                <table>
+                    <tr>
+                        <th style=" text-align: right;">
+                            رقم الفاتورة
+                        </th>
+                        <th style="font-weight: 400;  text-align: right;">
+                            100
+                        </th>
+                        <th style="text-align: left; direction: ltr; font-weight: 400; ">
+                            100
+                        </th>
+                        <th style="text-align: left; direction: ltr; ">
+                            Invoice Number
+                        </th>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style=" text-align: right;">
+                            تاريخ اصدار الفاتورة
+                        </td>
+                        <td style="font-weight: 400;  text-align: right;">
+                            25/4/2021
+                        </td>
+                        <td style="text-align: left; direction: ltr; font-weight: 400; ">
+                            25/4/2021
+                        </td>
+                        <td style="text-align: left; direction: ltr; ">
+                            Invoice Issue Date
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=" text-align: right;">
+                            تاريخ التوريد
+                        </td>
+                        <td style="font-weight: 400;  text-align: right;">
+                            25/4/2021
+                        </td>
+                        <td style="text-align: left; direction: ltr; font-weight: 400; ">
+                            25/4/2021
+                        </td>
+                        <td style="text-align: left; direction: ltr; ">
+                            Date of Supply
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tables-content">
+            <table>
+                <tr>
+                    <th colspan="2" style="text-align: right;">
+                        العميل
+                    </th>
+                    <th colspan="2" style="text-align: left;">
+                        Buyer
+                    </th>
+                </tr>
+                <tr>
+                    <td class="cell-title name" style="text-align: right; border-right: none;">
+                        الاسم
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td class="cell-title name" style="text-align: left; direction: ltr;">
+                        Name
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; border-right: none;">
+                        رقم المبنى
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr;">
+                        Building No.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; border-right: none;">
+                        اسم الشارع
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Street Name
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; border-right: none;">
+                        الحي
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        District
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        المدينة
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        City
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        البلد
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Country
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        الرمز البريدي
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Postal Code
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        الرقم الإضافي
+                        للعنوان
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Additional No.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        رقم تسجيل ضريبة
+                        القيمة المضافة
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        VAT Number
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        معرف اخر
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Other Buyer ID
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 50%; border-right: none;">
+                <tr>
+                    <th colspan="2" style="text-align: right;">
+                        المورد
+                    </th>
+                    <th colspan="2" style="text-align: left;">
+                        Seller
+                    </th>
+                </tr>
+                <tr>
+                    <td class="cell-title name" style="text-align: right; border-right: none;">
+                        الاسم
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td class="cell-title name" style="text-align: left; direction: ltr;">
+                        Name
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        رقم المبنى
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Building No.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        اسم الشارع
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Street Name
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        الحي
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        District
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        المدينة
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        City
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        البلد
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Country
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        الرمز البريدي
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Postal Code
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        الرقم الإضافي
+                        للعنوان
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Additional No.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        رقم تسجيل ضريبة
+                        القيمة المضافة
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        VAT Number
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;  border-right: none;">
+                        معرف اخر
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: left; direction: ltr; ">
+                        Other Buyer ID
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="products">
+            <tr>
+                <th colspan="4" style=" text-align: right; ">
+                    وصيف السلعة أو الخدمة
+                </th>
+                <th colspan="4" style=" text-align: left; direction: ltr; ">
+                    Line Items
+                </th>
+            </tr>
+            <tr class="subtitle">
+                <td>
+                    Item Subtotal
+                    Include VAT
+                    <br>
+                    المجموع (شامل ضريبة
+                    القيمة المضافة)
+                </td>
+                <td>
+                    Tax Amount
+                    <br>
+                    مبلغ الضريبة
+                </td>
+                <td>
+                    Tax Rate
+                    <br>
+                    نسبة الضريبة
+                </td>
+                <td>
+                    Discount
+                    <br>
+                    خصومات
+                </td>
+                <td>
+                    Taxable Amount
+                    <br>
+                    المبلغ الخاضع للضريبة
+                </td>
+                <td>
+                    Quantity
+                    <br>
+                    الكمية
+                </td>
+                <td>
+                    Unit Price
+                    <br>
+                    سعر الوحدة
+                </td>
+                <td>
+                    Goods/ Services
+                    <br>
+                    سعر الوحدة
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: 400;">
+                    230.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    30.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    15%
+                </td>
+                <td style="font-weight: 400;">
+                    0
+                </td>
+                <td style="font-weight: 400;">
+                    200.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    1
+                </td>
+                <td style="font-weight: 400;">
+                    200.00 SAR
+                </td>
+                <td style="font-weight: 400; text-align: left; direction: ltr;">
+                    Item A - السلعة أ
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: 400;">
+                    230.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    30.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    15%
+                </td>
+                <td style="font-weight: 400;">
+                    0
+                </td>
+                <td style="font-weight: 400;">
+                    200.00 SAR
+                </td>
+                <td style="font-weight: 400;">
+                    1
+                </td>
+                <td style="font-weight: 400;">
+                    200.00 SAR
+                </td>
+                <td style="font-weight: 400; text-align: left; direction: ltr;">
+                    Item A - السلعة أ
+                </td>
+            </tr>
+        </table>
+        <table class="totals">
+            <tr>
+                <th colspan="4" style=" text-align: right; ">
+                    إجمالي المبالغ
+                </th>
+                <th colspan="4" style=" text-align: left; direction: ltr; ">
+                    Total Amount
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    230.00 SAR
+                </td>
+                <td colspan="2">
+                    الاجمالي (غير شامل ضريبة القيمة المضافة)
+                </td>
+                <td colspan="2" style="text-align: left; direction: ltr;">
+                    Total (Excluding VAT)
+                </td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    230.00 SAR
+                </td>
+                <td colspan="2">
+                    مجموع الخصومات
+                </td>
+                <td colspan="2" style="text-align: left; direction: ltr;">
+                    Discount
+                </td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    230.00 SAR
+                </td>
+                <td colspan="2">
+                    الاجمالي الخاضع للضريبة (غير شامل ضريبة
+                    القيمة المضافة)
+                </td>
+                <td colspan="2" style="text-align: left; direction: ltr;">
+                    Total Taxable Amount (Excluding
+                    VAT)
+                </td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    230.00 SAR
+                </td>
+                <td colspan="2">
+                    مجموع ضريبة القيمة المضافة
+                </td>
+                <td colspan="2" style="text-align: left; direction: ltr;">
+                    Total VAT
+                </td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    230.00 SAR
+                </td>
+                <td colspan="2">
+                    إجمالي المبلغ المستحق
+                </td>
+                <td colspan="2" style="text-align: left; direction: ltr;">
+                    Total Amount Due
+                </td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+        </table>
+        <img src="./stamp.png" class="stamp">
+    </div>
+</body>
+
+</html>
