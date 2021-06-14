@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>tasawk</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #a1a1a1;
+
+        }
+
+        th,
+        td {
+            padding: 13px 10px 9px;
+            line-height: 1.5;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: 700;
+            color: #27324e;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width: 1240px;
+            height: 1754px;
+            margin: auto;
+            background-color: #fff;
+            position: relative;
+            padding: 44px 60px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        .title h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .head table {
+            width: 100%;
+            table-layout: fixed;
+            border: none;
+        }
+
+        .head table th {
+            font-weight: 400;
+            border: none;
+        }
+
+        .head table th.name {
+            font-weight: 700;
+            padding: 0;
+        }
+
+        .tables-content table {
+            width: 100%;
+            table-layout: fixed;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .tables-content table th {
+            font-weight: 700;
+            background-color: #e5e6ea;
+        }
+
+        @media print {
+
+            table,
+            th,
+            td {
+                border: 0.2mm solid #a1a1a1;
+
+            }
+
+            th,
+            td {
+                padding: 2.3mm 2.2mm 2.2mm;
+                line-height: 1.5;
+            }
+
+            body {
+                font-size: 2.71mm;
+            }
+
+            .content {
+                width: 210mm;
+                height: 297mm;
+                padding: 4.5mm 10mm;
+            }
+
+            .logo img {
+                width: 30.48mm;
+            }
+
+            .title h1 {
+                font-size: 4.74mm;
+            }
+
+            .tables-content table {
+                margin-top: 6mm;
+            }
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="content">
+        <div class="logo">
+            <img src="./logo.png">
+        </div>
+        <div class="title">
+            <h1>
+                كشف حساب
+                <br>
+                Account statement
+            </h1>
+        </div>
+        <div class="head">
+            <table>
+                <tr>
+                    <th class="name" style="text-align: right;">
+                        اسم العميل
+                    </th>
+                    <th colspan="3" style="text-align: right;">
+                        خالد نبيل
+                    </th>
+                    <th colspan="3" style="text-align: left; direction: ltr;">
+                        Khaled Nabil
+                    </th>
+                    <th class="name" style="text-align: left; direction: ltr;">
+                        Client Name
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="tables-content">
+            <table>
+                <tr>
+                    <th colspan="3"></th>
+                    <th colspan="3">الإجمالي</th>
+                </tr>
+                <tr>
+                    <th>التاريخ</th>
+                    <th colspan="2">البيان</th>
+                    <th>مدين</th>
+                    <th>دائن</th>
+                    <th>رصيد</th>
+                </tr>
+                <tr>
+                    <td>
+                        1/1/2021
+                    </td>
+                    <td colspan="2">
+                        اذن استلام نقدية رقم (سريل سندات القبض)
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1/1/2021
+                    </td>
+                    <td colspan="2">
+                        اذن استلام نقدية رقم (سريل سندات القبض)
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1/1/2021
+                    </td>
+                    <td colspan="2">
+                        اذن استلام نقدية رقم (سريل سندات القبض)
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        100
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
