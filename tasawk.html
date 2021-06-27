@@ -15,6 +15,7 @@
             color: #27324e;
             margin: 0;
             padding: 0;
+
         }
 
         .content {
@@ -22,8 +23,9 @@
             max-height: 1754px;
             margin: auto;
             background-color: #fff;
-            position: relative;
             padding: 26px 60px 120px;
+            position: relative;
+            overflow: hidden;
         }
 
         .logo {
@@ -139,6 +141,30 @@
             left: 90px;
         }
 
+        .hint {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            top: 34px;
+            left: -39px;
+            width: 180px;
+            height: 35px;
+            transform: rotate(-45deg);
+            color: #fff;
+            z-index: 9999;
+            font-size: 18px;
+        }
+
+        .hint.paied {
+            background-color: #00ca00;
+        }
+
+        .hint.unpaied {
+            background-color: #a61718;
+        }
+
         @media print {
             body {
                 font-size: 2.5mm;
@@ -226,6 +252,9 @@
 
 <body>
     <div class="content">
+        <div class="hint paied">
+            Unpaid - مستحقة
+        </div>
         <div class="logo">
             <img src="./logo.png">
         </div>
