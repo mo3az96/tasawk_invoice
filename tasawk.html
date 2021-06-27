@@ -141,7 +141,7 @@
             left: 90px;
         }
 
-        .hint {
+        /* .hint {
             position: absolute;
             display: flex;
             flex-direction: row;
@@ -163,6 +163,21 @@
 
         .hint.unpaied {
             background-color: #a61718;
+        } */
+        .hint {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            color: rgba(0, 0, 0, 0.20);
+            z-index: 9999;
+            font-size: 200px;
+            z-index: 1;
+            width: max-content;
         }
 
         @media print {
@@ -245,6 +260,10 @@
                 width: 38.44mm;
                 height: 27.26mm;
             }
+
+            .hint {
+                font-size: 30mm;
+            }
         }
     </style>
 </head>
@@ -252,8 +271,11 @@
 
 <body>
     <div class="content">
+        <!-- <div class="hint unpaied">
+           مستحقة - Unpaid
+        </div> -->
         <div class="hint paied">
-            Unpaid - مستحقة
+            مدفوعة - Paid
         </div>
         <div class="logo">
             <img src="./logo.png">
