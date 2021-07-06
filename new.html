@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>tasawk</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 14px;
+            color: #27324e;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        table,
+        td {
+            border: 1px solid #bfbfbf;
+
+        }
+
+
+        td {
+            padding: 12px;
+            line-height: 1.5;
+        }
+
+        th {
+            background-color: #7d8495;
+            color: #fff;
+            font-weight: 700;
+            padding: 13px 12px;
+            line-height: 1.5;
+        }
+
+        .content {
+            width: 1240px;
+            height: 1754px;
+            margin: auto;
+            padding: 29px 59px 53px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .wm {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: -1;
+            opacity: 0.07;
+        }
+
+        .content-body {
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 267.109px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 180px;
+            margin: 0 auto 5px;
+        }
+
+        .logo h2 {
+            font-size: 18.4px;
+            font-weight: 700;
+            margin: 0 0 2px;
+        }
+
+        .logo h3 {
+            font-size: 12.3px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .middle {
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 19px;
+        }
+
+        .status {
+            width: 220px;
+            height: 51px;
+            border-radius: 25.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 23.4px;
+        }
+
+        .status.paid {
+            background-color: rgb(31, 176, 65);
+        }
+        .status.un {
+            background-color: #a61718;
+        }
+
+        .qr {
+            width: 267.109px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .qr img {
+            width: 110px;
+            height: 110px;
+            border: 1px solid #bfbfbf;
+            padding: 3px;
+        }
+
+        .tables-content {
+            padding-top: 5px;
+        }
+
+        td span {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        .sec-th {
+            font-weight: 700;
+            padding: 25px 12px;
+        }
+
+        .bank-acc-td {
+            padding: 20px 0;
+        }
+
+        .bank-acc {
+            display: flex;
+            align-items: center;
+        }
+
+        .bank-acc img {
+            max-width: 155px;
+            margin: 0 20px;
+        }
+
+        .bank-acc span {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .bank-info {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.643;
+            font-weight: 700;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff0000;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 33px 0 0;
+        }
+
+        .terms a {
+            position: relative;
+            color: #ff0000;
+            font-size: 16px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .terms a:hover {
+            text-decoration: none;
+        }
+
+        .stamp {
+            position: absolute;
+            bottom: -90px;
+            left: 90px;
+            width: 227px;
+            height: 161px;
+        }
+
+        .content-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact a {
+            color: #27324e;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .contact a~a::before {
+            content: "/";
+            margin: 0 17px;
+        }
+
+        @media print {
+            body {
+                font-size: 2.5mm;
+            }
+
+            table {
+                margin-top: 5.1mm;
+            }
+
+            table,
+            td {
+                border: 0.2mm solid #bfbfbf;
+
+            }
+
+
+            td {
+                padding: 2mm;
+            }
+
+            th {
+                padding: 2mm;
+            }
+
+            .content {
+                width: 210mm;
+                max-height: 297mm;
+                padding: 4.9mm 10mm 9mm;
+            }
+
+            .logo {
+                width: 46mm;
+            }
+
+            .logo img {
+                width: 30.48mm;
+                margin: 0 auto 1mm;
+            }
+
+            .logo h2 {
+                font-size: 3.12mm;
+                margin: 0 0 0.4mm;
+            }
+
+            .logo h3 {
+                font-size: 2.08mm;
+            }
+
+            .page-title {
+                font-size: 3.05mm;
+                margin: 0 0 3.8mm;
+            }
+
+            .status {
+                width: 36.8mm;
+                height: 8.6mm;
+                border-radius: 4.3mm;
+                font-size: 3.96mm;
+            }
+
+            .qr {
+                width: 46mm;
+            }
+
+            .qr img {
+                width: 19.6mm;
+                height: 19.6mm;
+                border: 0.2mm solid #bfbfbf;
+                padding: 0.6mm;
+            }
+
+            .tables-content {
+                padding-top: 1mm;
+            }
+
+            td span {
+                font-size: 2.71mm;
+                margin-top: 0.6mm;
+            }
+
+            .sec-th {
+                padding: 4mm 2mm;
+            }
+
+            .bank-acc-td {
+                padding: 3.5mm 0;
+            }
+
+            .bank-acc img {
+                max-width: 27mm;
+                margin: 0 4mm;
+            }
+
+            .terms {
+                font-size: 2.71mm;
+                font-weight: 700;
+                margin: 5.6mm 0 0;
+            }
+
+            .terms a {
+                font-size: 2.71mm;
+                margin-right: 0.8mm;
+            }
+
+            .stamp {
+                bottom: -16.4mm;
+                left: 16.4mm;
+                width: 38.44mm;
+                height: 27.26mm;
+            }
+
+            .contact a {
+                font-size: 2.45mm;
+            }
+
+            .contact a~a::before {
+                content: "/";
+                margin: 0 2.9mm;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="content">
+        <div class="content-body">
+            <div class="header">
+                <div class="logo">
+                    <img src="./logo.png">
+                    <h2>مؤسســة تســوق الرقمـي لتقنيــة المعلومــات</h2>
+                    <h3>TASAWK for Information Technology Institute</h3>
+                </div>
+                <div class="middle">
+                    <h2 class="page-title">
+                        فاتورة ضريبية Tax Invoice
+                    </h2>
+                    <!-- <div class="status un">
+                        مستحقة Unpaid
+                    </div> -->
+                    <div class="status paid">
+                        مدفــوعة Paid
+                    </div>
+                </div>
+                <div class="qr">
+                    <img src="./qr.png">
+                </div>
+            </div>
+            <div class="tables-content">
+                <table>
+                    <tr>
+                        <th colspan="20" style="text-align: right; direction: ltr;">
+                            Seller البائع
+                        </th>
+                        <th colspan="20" style="text-align: left; direction: ltr;">
+                            Buyer المشتري
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            Company Name اسم الشركة
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            Company Name اسم الشركة
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            Company Name اسم الشركة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            Address العنوان
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            Address العنوان
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            Address العنوان
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            C.R NO. رقم السجل التجاري
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            C.R NO. رقم السجل التجاري
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            C.R NO. رقم السجل التجاري
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            VAT NO. الرقم الضريبي
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            VAT NO. الرقم الضريبي
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            VAT NO. الرقم الضريبي
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            Email Address البريد الإلكتروني
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            Email Address البريد الإلكتروني
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            Email Address البريد الإلكتروني
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="15" style="text-align: right; direction: ltr;">
+                            Mobile NO. رقم الجوال
+                        </td>
+                        <td colspan="10" style="text-align: center; font-weight: 700; direction: ltr;">
+                            Mobile NO. رقم الجوال
+                        </td>
+                        <td colspan="15" style="text-align: left; direction: ltr;">
+                            Mobile NO. رقم الجوال
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" style="text-align: left; direction: ltr;">
+                            Due Date تاريخ الإستحقاق
+                            <span>06/07/2021</span>
+                        </td>
+                        <td colspan="10" style="text-align: left; direction: ltr;">
+                            Starting Date تاريخ بداية الخدمة
+                            <span>06/07/2021</span>
+                        </td>
+                        <td colspan="10" style="text-align: left; direction: ltr;">
+                            Invoice Issue Date تاريخ اصدار الفاتورة
+                            <span>06/07/2021</span>
+                        </td>
+                        <td colspan="10" style="text-align: left; direction: ltr;">
+                            Invoice No. رقم الفاتورة
+                            <span>IN-15478</span>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="10" style="text-align: center; direction: ltr;">
+                            Description of Products/ Services وصف المنتجات أو الخدمات
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="sec-th" style="text-align: center; direction: ltr;">
+                            Item Subtotal Include VAT<br>
+                            المجموع (شامل ضريبة القيمة المضافة)
+                        </td>
+                        <td colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Tax Amount<br>
+                            مبلغ الضريبة
+                        </td>
+                        <td colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Tax Rate<br>
+                            نسبة الضريبة
+                        </td>
+                        <td colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Quantity<br>
+                            الكمية
+                        </td>
+                        <td colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Unit Price<br>
+                            سعر الوحدة
+                        </td>
+                        <td colspan="4" class="sec-th" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            30.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            15%
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            200.00 SAR
+                        </td>
+                        <td colspan="4" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            30.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            15%
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            200.00 SAR
+                        </td>
+                        <td colspan="4" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            30.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            15%
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            200.00 SAR
+                        </td>
+                        <td colspan="4" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            30.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            15%
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            200.00 SAR
+                        </td>
+                        <td colspan="4" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            30.00 SAR
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            15%
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            200.00 SAR
+                        </td>
+                        <td colspan="4" style="text-align: left; direction: ltr;">
+                            Product/ Service Name اسم المنتج أو الخدمة
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="8" style="text-align: center; direction: ltr;">
+                            Description of Products/ Services وصف المنتجات أو الخدمات
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: right; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="7" style="text-align: right; direction: ltr; font-weight: 700;">
+                            الاجمالي (غير شامل ضريبة القيمة المضافة )Total (Excluding VAT)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: right; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="7" style="text-align: right; direction: ltr; font-weight: 700;">
+                            مجموع الخصومات Discount
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: right; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="7" style="text-align: right; direction: ltr; font-weight: 700;">
+                            مجموع ضريبة القيمة المضافة Total VAT
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: right; direction: ltr; font-weight: 700;">
+                            230.00 SAR
+                        </td>
+                        <td colspan="7" style="text-align: right; direction: ltr; font-weight: 700;">
+                            إجمالي المبلغ المستحق Total Amount Due
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="bank-acc-td">
+                            <div class="bank-acc">
+                                <img src="./bank1.png">
+                                <div class="bank-info">
+                                    <div>اسم الحساب: <span>مؤسسة تسوق الرقمية لتكنولوجيا المعلومات</span></div>
+                                    <div>رقم الحساب: <span>22880513000107</span></div>
+                                    <div>الأيبان: <span>7010000022880513000107</span></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="4" class="bank-acc-td">
+                            <div class="bank-acc">
+                                <img src="./bank2.png">
+                                <div class="bank-info">
+                                    <div>اسم الحساب: <span>مؤسسة تسوق الرقمية لتكنولوجيا المعلومات</span></div>
+                                    <div>رقم الحساب: <span>22880513000107</span></div>
+                                    <div>الأيبان: <span>7010000022880513000107</span></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p class="terms">
+                *للإطلاع على الشروط والأحكام
+                <a href="#!">اضغط هنا</a>
+            </p>
+            <img src="./stamp.png" class="stamp">
+        </div>
+        <div class="content-footer" style="direction: ltr;">
+            <div class="en-logo">
+                <img src="./logo-en.png">
+            </div>
+            <div class="contact">
+                <a href="www.tasawk.com.sa">www.tasawk.com.sa</a>
+                <a href="mailto:s@tasawk.com">s@tasawk.com</a>
+                <a href="tel:+966 540664139">+966 540664139</a>
+            </div>
+        </div>
+        <img src="./wm.png" class="wm">
+    </div>
+</body>
+
+</html>
