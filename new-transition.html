@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>tasawk</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 14px;
+            color: #27324e;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .table-head {
+            margin-top: 30px;
+            width: 50%;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: auto;
+            background-color: #7d8495;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #bfbfbf;
+
+        }
+
+        td {
+            padding: 13px 8px;
+            line-height: 1.5;
+        }
+
+        th {
+            font-weight: 700;
+            padding: 13px 12px;
+            line-height: 1.5;
+        }
+
+        .content {
+            width: 1240px;
+            height: 1754px;
+            margin: auto;
+            padding: 29px 59px 53px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .wm {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: -1;
+            opacity: 0.07;
+        }
+
+        .content-body {
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 267.109px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 180px;
+            margin: 0 auto 5px;
+        }
+
+        .logo h2 {
+            font-size: 18.4px;
+            font-weight: 700;
+            margin: 0 0 2px;
+        }
+
+        .logo h3 {
+            font-size: 12.3px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .page-head {
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+            direction: ltr;
+            font-weight: 700;
+        }
+
+        .first-table td {
+            direction: ltr;
+            font-size: 14px;
+        }
+
+        .first-table td span {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .stamp {
+            position: absolute;
+            bottom: -90px;
+            left: 90px;
+            width: 227px;
+            height: 161px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff0000;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 33px 0 0;
+        }
+
+        .terms a {
+            position: relative;
+            color: #ff0000;
+            font-size: 16px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .terms a:hover {
+            text-decoration: none;
+        }
+
+        .content-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact a {
+            color: #27324e;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .contact a~a::before {
+            content: "/";
+            margin: 0 17px;
+        }
+
+        .en-logo img {
+            width: 180px;
+        }
+
+        @media print {
+            body {
+                font-size: 2.5mm;
+            }
+
+            table {
+                margin-top: 5.1mm;
+            }
+
+            .table-head {
+                margin-top: 5.1mm;
+                height: 7.6mm;
+            }
+
+            table,
+            td {
+                border: 0.2mm solid #bfbfbf;
+
+            }
+
+
+            td {
+                padding: 1.6mm;
+            }
+
+            th {
+                padding: 2mm;
+            }
+
+            .content {
+                width: 210mm;
+                max-height: 297mm;
+                padding: 4.9mm 10mm 9mm;
+            }
+
+            .logo {
+                width: 46mm;
+            }
+
+            .logo img {
+                width: 30.48mm;
+                margin: 0 auto 1mm;
+            }
+
+            .logo h2 {
+                font-size: 3.12mm;
+                margin: 0 0 0.4mm;
+            }
+
+            .logo h3 {
+                font-size: 2.08mm;
+            }
+
+            .stamp {
+                bottom: -16.4mm;
+                left: 16.4mm;
+                width: 38.44mm;
+                height: 27.26mm;
+            }
+
+            .terms {
+                font-size: 2.71mm;
+                font-weight: 700;
+                margin: 5.6mm 0 0;
+            }
+
+            .terms a {
+                font-size: 2.71mm;
+                margin-right: 0.8mm;
+            }
+
+            .contact a {
+                font-size: 2.45mm;
+            }
+
+            .contact a~a::before {
+                content: "/";
+                margin: 0 2.9mm;
+            }
+
+            .en-logo img {
+                width: 33.5mm;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="content">
+        <div class="content-body">
+            <div class="header">
+                <div class="logo">
+                    <img src="./logo.png">
+                    <h2>مؤسســة تســوق الرقمـي لتقنيــة المعلومــات</h2>
+                    <h3>TASAWK for Information Technology Institute</h3>
+                </div>
+            </div>
+            <h2 class="page-head">
+                Account Statement كشف حساب
+            </h2>
+            <div class="tables-content">
+                <table class="first-table">
+                    <td>
+                        To Date حتى تاريخ
+                        <span>06/07/2021</span>
+                    </td>
+                    <td>
+                        Starting from Date بداية من تاريخ
+                        <span>06/07/2021</span>
+                    </td>
+                    <td>
+                        Client Name اسم العميل
+                        <span>مؤسسة مقرن هشام المقرن</span>
+                    </td>
+                </table>
+
+                <div class="table-head" style="text-align: center; direction: ltr;">
+                    Total الإجمالي
+                </div>
+
+                <table style="margin: 0;">
+                    <tr>
+                        <th colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            التاريخ Date
+                        </th>
+                        <th colspan="2" class="sec-th" style="text-align: center; direction: ltr;">
+                            Movement Statement بيان الحركة
+                        </th>
+                        <th colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Creditor دائن
+                        </th>
+                        <th colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Debit دائن
+                        </th>
+                        <th colspan="1" class="sec-th" style="text-align: center; direction: ltr;">
+                            Credit رصيد
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            06/07/2021
+                        </td>
+                        <td colspan="2" style="text-align: center; direction: ltr;">
+                            اذن استلام نقدية رقم (سريل سندات القبض)
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            06/07/2021
+                        </td>
+                        <td colspan="2" style="text-align: center; direction: ltr;">
+                            اذن استلام نقدية رقم (سريل سندات القبض)
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            06/07/2021
+                        </td>
+                        <td colspan="2" style="text-align: center; direction: ltr;">
+                            اذن استلام نقدية رقم (سريل سندات القبض)
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            06/07/2021
+                        </td>
+                        <td colspan="2" style="text-align: center; direction: ltr;">
+                            اذن استلام نقدية رقم (سريل سندات القبض)
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            06/07/2021
+                        </td>
+                        <td colspan="2" style="text-align: center; direction: ltr;">
+                            اذن استلام نقدية رقم (سريل سندات القبض)
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                        <td colspan="1" style="text-align: center; direction: ltr;">
+                            1000
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p class="terms">
+                *للإطلاع على الشروط والأحكام
+                <a href="#!">اضغط هنا</a>
+            </p>
+            <img src="./stamp.png" class="stamp">
+
+            <img src="./wm.png" class="wm">
+        </div>
+        <div class="content-footer" style="direction: ltr;">
+            <div class="en-logo">
+                <img src="./logo-en.png">
+            </div>
+            <div class="contact">
+                <a href="www.tasawk.com.sa">www.tasawk.com.sa</a>
+                <a href="mailto:s@tasawk.com">s@tasawk.com</a>
+                <a href="tel:+966 540664139">+966 540664139</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
