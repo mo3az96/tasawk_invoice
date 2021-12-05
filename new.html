@@ -242,7 +242,44 @@
             width: 180px;
         }
 
+        .select-cont {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #27324e;
+            font-weight: 700;
+        }
+
+        select {
+            margin: 0 10px;
+            padding: 0 23px;
+            min-width: 110px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid #bfbfbf;
+        }
+
+        button {
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            background-color: #27324e;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 40px;
+            border-radius: 20px;
+            border: none;
+        }
+
         @media print {
+            .select-cont{
+                display: none;
+            }
             body {
                 font-size: 2.5mm;
             }
@@ -518,7 +555,7 @@
                         <td colspan="2" class="sec-th" style="text-align: center; direction: ltr;">
                             Item Subtotal Include VAT<br>
                             المجموع (شامل ضريبة القيمة المضافة)
-                        </td> 
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="4" style="text-align: right; direction: ltr;">
@@ -538,7 +575,7 @@
                         </td>
                         <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
                             230.00 SAR
-                        </td> 
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="4" style="text-align: right; direction: ltr;">
@@ -558,7 +595,7 @@
                         </td>
                         <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
                             230.00 SAR
-                        </td> 
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="4" style="text-align: right; direction: ltr;">
@@ -578,7 +615,7 @@
                         </td>
                         <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
                             230.00 SAR
-                        </td> 
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="4" style="text-align: right; direction: ltr;">
@@ -598,7 +635,7 @@
                         </td>
                         <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
                             230.00 SAR
-                        </td> 
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="4" style="text-align: right; direction: ltr;">
@@ -618,7 +655,7 @@
                         </td>
                         <td colspan="2" style="text-align: center; direction: ltr; font-weight: 700;">
                             230.00 SAR
-                        </td> 
+                        </td>
                     </tr>
                 </table>
                 <table>
@@ -674,6 +711,15 @@
                 *للإطلاع على الشروط والأحكام
                 <a href="#!">اضغط هنا</a>
             </p>
+            <div class="select-cont">
+                <label>طريقة الدفع:</label>
+                <select>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                </select>
+                <button>ادفع الآن</button>
+            </div>
             <img src="./stamp.png" class="stamp">
 
             <img src="./wm.png" class="wm">
